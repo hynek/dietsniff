@@ -1,0 +1,38 @@
+.TH dietsniff 1 "October 2005"
+.SH NAME
+.PP
+dietsniff \- a slim and static sniffer for Linux
+.SH SYNOPSIS
+.PP
+.B dietsniff [-c 
+.I count
+] [\-i 
+.I interface
+] [\-n] [-p] [-v]
+.SH DESCRIPTION
+.PP
+dietsniff is a tool for capturing/analyzing network traffic.
+.SH OPTIONS
+.TP
+.B \-c
+Sniff only
+.I count
+packets
+.TP
+.B \-i
+Show only traffic from the specified
+.I interface
+.TP
+.B \-n
+Don't convert addresses to names
+.TP
+.B \-p
+Output in the
+.I pcap-format
+(eg. for viewing it later with a tool like Ethereal).
+.TP
+.B \-v
+Print more information about packets.
+
+.SH AUTHOR
+Hynek Schlawack <hynek@ularx.de>

@@ -1,0 +1,151 @@
+2008-12-18  Hynek Schlawack  <hs+cl@ox.cx>
+
+	* main.c (main): Fixed a warning by changing the type of
+	`fromlen' to `socklen_t'.
+
+	* dietsniff.h: Added definitions for __likely & __unlikely.  Based
+	on a patch by Nikos Mavrogiannopoulos.
+
+2008-12-17  Hynek Schlawack  <hs+cl@ox.cx>
+
+	* pcap.c (print_pcap): BUGFIX: sll-fields have to bee in network
+	order. Patch by Nikos Mavrogiannopoulos.
+
+	* main.c (main): BUGFIX: Off-by-one bug in BUF_SIZE, reported by
+	Nikos Mavrogiannopoulos.
+
+2006-01-23  Hynek Schlawack  <hynek@ularx.de>
+	
+	* main.c: BUGFIX: Sniffing used to stop after 2^32
+	packets. Reported by Jamie McNeil.
+	
+	* main.c: Removed some C99-stuff.
+	
+2006-01-22  Hynek Schlawack  <hynek@ularx.de>
+	
+	* main.c/dietsniff.h: Added filter-statistics on exit. Patch by
+	Jamie McNeil.
+	
+2005-10-20  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Added -c option allowing to specify the ammount of
+	packets to receive (Based on a patch by Adrian Fruehwirth).
+
+	* dietsniff.h: Added field to options to make -c possible.
+
+	* man/dietsniff.1: Explanation for -c added.
+
+	* main.c: Added -c to short help.
+
+	* main.c: Enhaced fault-tolerancy in the conversion of -c.
+
+	* dietsniff.h: Version bump.
+
+2005-10-17  Hynek Schlawack  <hynek@ularx.de>
+
+	* pcap.h: Added "struct pcap_sll_hdr" necessary for proper
+	pcap-logs.
+
+	* pcap.c: Fixed the pcap-output to be standard-comform. Using
+	DLT_LINUX_SLL instead of DLT_NULL.
+
+2005-10-12  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Small fixes in the getopt-handling.
+
+	* docs: Updated documentation.
+
+	* pcap.c: New file, containing support for PCAP-logs.
+
+	* pcap.h: New file, containing support for PCAP-logs.
+
+	* main.c: Added support for PCAP-logs.
+
+	* Makefile: Some minor improvements.
+
+	* main.c: Added security related checks that might prove important
+	in the future.
+
+2005-10-05  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Small fixes as it didn't compile with empty
+	FEATURES. Thanks to Adrian Fruehwirth for reporting that.	
+
+	* dietsniff.h: Small fixes as it didn't compile with empty
+	FEATURES. Thanks to Adrian Fruehwirth for reporting that. Version
+	bump.
+
+	* Makefile: Tiny adjustment.
+	
+	* rev_res4.c: Really added to repo now.
+	
+	* rev_res4.h: Really added to repo now.
+
+2005-05-27  Hynek Schlawack  <hynek@ularx.de>
+
+	* man/dietsniff.1: Added explanation of the -v option.
+
+	* main.c: Added handling of IP-flags.
+
+	* main.c: Added verbose option.
+
+	* main.c: Ignoring double packets from loopback.
+
+	* main.c: Reindent.
+
+2005-05-26  Hynek Schlawack  <hynek@ularx.de>
+
+	* Makefile: Compiling with -Wall now.
+
+	* main.c: Instead of filtering interfaces by hand, we bind to them
+	now.
+
+	* Global: Enhaced the error handling by introducing error(char *).
+
+2005-05-25  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Enhaced timestamps (with inspiration from
+	http://www.fefe.de/mininet/).
+
+	* README/INSTALL: Improved the documentation concerning optional
+	features.
+
+2005-05-24  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Made the arrow in port-output consistent with the one
+	used when printing addresses.
+
+	* dietsniff.h: Added option to not reverse-lookup to the
+	options-struct.
+
+	* man/dietsniff.1: Added explanation of the introduced
+	"-n"-switch.
+
+	* Makefile: Added support for excludable features with reverse
+	DNS-lookups being the first.
+
+	* rev_res4.h: File added. Contains globally important definitions
+	for reverse IPv4 DNS-lookups.
+	
+	* rev_res4.c: File added. Contains code for reverse IPv4
+	DNS-lookups.
+
+	* main.c: Added support for reverse DNS-lookups.
+
+2005-05-23  Hynek Schlawack  <hynek@ularx.de>
+
+	* main.c: Minor cleanup/resort of the #includes-block.
+
+	* main.c: Started generalizing the hack by moving the filter into
+	a general options-struct.
+
+2005-05-22  Hynek Schlawack  <hynek@ularx.de>
+
+	* Makefile: Forgot to strip the binary. Gains 4k.
+
+2005-05-20  Hynek Schlawack  <hynek@ularx.de>
+
+	* Makefile: Convience-stuff added.
+
+	* dietsniff: Initial release.
+

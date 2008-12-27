@@ -1,0 +1,25 @@
+Revise the variables at the top of the Makefile and build it by
+running "make".
+
+You may install the resulting binary together with the manpage using
+"make install".
+
+Per default the includes of the libowfat are assumed in
+/usr/include/libowfat (Gentoo-default). The binary and the manpage are
+installed into /usr/local/sbin and /usr/local/man/man1 respectively.
+
+Since 0.2 it is possible to include/exclude several features that blow
+up the sourcecode while having a limited usefulness. You can switch
+them on using the FEATURES-variable inside the Makefile.
+
+Features supported so far:
+
+  - USE_REV_RES: Use reverse DNS-lookups. While it's possible to
+    switch them off at runtime, the code still takes up ~16K.
+
+  - USE_PCAP: Include support for pcap-logs. This feature doesn't have
+    a dramatical impact on the final size so you might want to keep it
+    enabled.
+
+  - USE_PACKET_STATISTICS: Display some packet statistics after
+    sniffing.

@@ -1,0 +1,20 @@
+Welcome to dietsniff, the slim and static sniffer for Linux.
+
+dietsniff is a network-debugging tool like tcpdump or ethereal. The
+difference to those powerful tools however is that dietsniff is linked
+against the dietlibc by Felix von Leitner and doesn't require the
+libpcap. Therefore it's really small while being static. dietsniff's most
+useful scenario is probably to sniff the packets into a pcap-logfile which
+can be later viewed using more userfriendly applications.
+
+Requirements:
+	- Linux, tested with 2.4 and 2.6
+	- dietlibc [http://www.fefe.de/dietlibc/], tested with 0.28
+	- libowfat [http://www.fefe.de/libowfat/], tested with 0.22
+
+The latest version can be found at http://www.ularx.de/dietsniff/ .
+
+See the manpage for the usage.
+
+Enjoy,
+Hynek Schlawack <hynek@ularx.de>
