@@ -12,9 +12,9 @@ Requirements:
 	- dietlibc [http://www.fefe.de/dietlibc/], tested with 0.28
 	- libowfat [http://www.fefe.de/libowfat/], tested with 0.22
 
-The latest version can be found at http://www.ularx.de/dietsniff/ .
+The latest version can be found at http://ox.cx/dietsniff/ .
 
 See the manpage for the usage.
 
 Enjoy,
-Hynek Schlawack <hynek@ularx.de>
+Hynek Schlawack <hs@ox.cx>
