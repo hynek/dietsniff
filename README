@@ -8,9 +8,10 @@ useful scenario is probably to sniff the packets into a pcap-logfile which
 can be later viewed using more user friendly applications.
 
 Requirements:
-	- Linux, tested with 2.4 and 2.6
-	- dietlibc [http://www.fefe.de/dietlibc/], tested with 0.28
-	- libowfat [http://www.fefe.de/libowfat/], tested with 0.22
+
+* Linux, tested with 2.4 and 2.6
+* dietlibc [http://www.fefe.de/dietlibc/], tested with 0.28
+* libowfat [http://www.fefe.de/libowfat/], tested with 0.22
 
 The latest version can be found at https://github.com/hynek/dietsniff/ .
 
